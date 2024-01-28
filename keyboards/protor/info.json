@@ -1,0 +1,91 @@
+{
+    "keyboard_name": "protor",
+    "maintainer": "sourproton",
+    "manufacturer": "sourproton",
+    "url": "https://github.com/sourproton/protor",
+    "bootloader_instructions": "bootmagic or press and hold BOOT0, press and release NRST, release BOOT0",
+    "tags": ["ergo", "split"],
+    "development_board": "blackpill_f401",
+    "bootmagic": {
+        "enabled": true,
+        "matrix": [0, 0]
+    },
+    "layouts": {
+        "LAYOUT_split_3x5_3": {
+            "layout": [
+                {"matrix": [0, 0], "x":0, "y":0.25},
+                {"matrix": [0, 1], "x":1, "y":0.125},
+                {"matrix": [0, 2], "x":2, "y":0},
+                {"matrix": [0, 3], "x":3, "y":0.125},
+                {"matrix": [0, 4], "x":4, "y":0.25},
+
+                {"matrix": [4, 0], "x":7, "y":0.25},
+                {"matrix": [4, 1], "x":8, "y":0.125},
+                {"matrix": [4, 2], "x":9, "y":0},
+                {"matrix": [4, 3], "x":10, "y":0.125},
+                {"matrix": [4, 4], "x":11, "y":0.25},
+
+                {"matrix": [1, 0], "x":0, "y":1.25},
+                {"matrix": [1, 1], "x":1, "y":1.125},
+                {"matrix": [1, 2], "x":2, "y":1},
+                {"matrix": [1, 3], "x":3, "y":1.125},
+                {"matrix": [1, 4], "x":4, "y":1.25},
+
+                {"matrix": [5, 0], "x":7, "y":1.25},
+                {"matrix": [5, 1], "x":8, "y":1.125},
+                {"matrix": [5, 2], "x":9, "y":1},
+                {"matrix": [5, 3], "x":10, "y":1.125},
+                {"matrix": [5, 4], "x":11, "y":1.25},
+
+                {"matrix": [2, 0], "x":0, "y":2.25},
+                {"matrix": [2, 1], "x":1, "y":2.125},
+                {"matrix": [2, 2], "x":2, "y":2},
+                {"matrix": [2, 3], "x":3, "y":2.125},
+                {"matrix": [2, 4], "x":4, "y":2.25},
+
+                {"matrix": [6, 0], "x":7, "y":2.25},
+                {"matrix": [6, 1], "x":8, "y":2.125},
+                {"matrix": [6, 2], "x":9, "y":2},
+                {"matrix": [6, 3], "x":10, "y":2.125},
+                {"matrix": [6, 4], "x":11, "y":2.25},
+
+                {"matrix": [3, 2], "x":2.5, "y":3.25},
+                {"matrix": [3, 3], "x":3.5, "y":3.5},
+                {"matrix": [3, 4], "x":4.5, "y":3.75},
+
+                {"matrix": [7, 0], "x":6.5, "y":3.75},
+                {"matrix": [7, 1], "x":7.5, "y":3.5},
+                {"matrix": [7, 2], "x":8.5, "y":3.25}
+            ]
+        }
+    },
+    "matrix_pins": {
+        "direct": [
+            ["B10", "A8", "B15", "B14", "B13"],
+            ["B8", "B5", "B4", "B3", "A15"],
+            ["A4", "A5", "A6", "A7", "B0"],
+            [null, null, "A2", "A1", "A0"]
+        ]
+    },
+    "split": {
+        "bootmagic": {
+            "matrix": [4, 4]
+        },
+        "enabled": true,
+        "matrix_pins": {
+            "right": {
+                "direct": [
+                    ["B13", "B14", "B15", "A8", "B10"],
+                    ["A15", "B3", "B4", "B5", "B8"],
+                    ["B0", "A7", "A6", "A5", "A4"],
+                    ["A0", "A1", "A2", null, null]
+                ]
+            }
+        }
+    },
+    "usb": {
+        "device_version": "0.0.1",
+        "pid": "0x0000",
+        "vid": "0xFEED"
+    }
+}
