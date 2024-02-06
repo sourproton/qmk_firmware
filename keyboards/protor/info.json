@@ -6,12 +6,20 @@
     "bootloader_instructions": "bootmagic or press and hold BOOT0, press and release NRST, release BOOT0",
     "tags": ["ergo", "split"],
     "development_board": "blackpill_f401",
+    "features": {
+        "extrakey": true,
+        "mousekey": true
+    },
     "bootmagic": {
         "enabled": true,
         "matrix": [0, 0]
     },
+    "caps_word": {
+        "enabled": true,
+        "both_shifts_turns_on": true
+    },
     "layouts": {
-        "LAYOUT_split_3x5_3": {
+        "LAYOUT": {
             "layout": [
                 {"matrix": [0, 0], "x":0, "y":0.25},
                 {"matrix": [0, 1], "x":1, "y":0.125},
