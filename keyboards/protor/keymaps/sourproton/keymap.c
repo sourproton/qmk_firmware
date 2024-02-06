@@ -1,6 +1,10 @@
 // Copyright 2023 QMK
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+// To flash:
+// qmk flash -bl dfu-util-split-left
+// qmk flash -bl dfu-util-split-right
+
 #include QMK_KEYBOARD_H
 
 #define _BASE    0
