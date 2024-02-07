@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *                 ┌───────┐                                       ┌───────┐
      *                 │   `   │                                       │       │
      *                 │       ├───────┐                       ┌───────┤       │
-     *                 └───────┤   .   │                       │///////├───────┘
+     *                 └───────┤  SPC  │                       │///////├───────┘
      *                         │       ├───────┐       ┌───────┤///////│
      *                         └───────┤   \   │       │       ├───────┘
      *                                 │       │       │       │
@@ -79,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, KC_LEFT_SHIFT, KC_LEFT_CTRL, KC_LEFT_ALT, KC_LEFT_GUI,
         KC_MINUS, KC_EQUAL, KC_SEMICOLON, KC_LEFT_BRACKET, KC_RIGHT_BRACKET,
         _______, _______, _______, KC_RIGHT_ALT, _______,
-        KC_GRAVE, KC_DOT, KC_BACKSLASH,
+        KC_GRAVE, KC_SPACE, KC_BACKSLASH,
         _______, _______, _______
     ),
 
@@ -218,13 +218,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /*
      * MOUSE LAYER
      * ┌───────┬───────┬───────┬───────┬───────┐       ┌───────┬───────┬───────┬───────┬───────┐
-     * │       │       │       │       │       │       │SPEED 0│W LEFT │ M UP  │W RIGHT│ W UP  │
+     * │       │       │       │       │       │       │       │W LEFT │ M UP  │W RIGHT│ W UP  │
      * │       │       │       │       │       │       │       │       │       │       │       │
      * ├───────┼───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┼───────┼───────┤
-     * │ SUPER │  ALT  │ CTRL  │ SHIFT │       │       │SPEED 1│M LEFT │M  DOWN│M RIGHT│ W DO  │
+     * │ SUPER │  ALT  │ CTRL  │ SHIFT │       │       │       │M LEFT │M  DOWN│M RIGHT│ W DO  │
      * │       │       │       │       │       │       │       │       │       │       │       │
      * ├───────┼───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┼───────┼───────┤
-     * │       │ ALTGR │       │       │       │       │SPEED 2│ PASTE │ COPY  │  CUT  │       │
+     * │       │ ALTGR │       │       │       │       │       │ PASTE │ COPY  │  CUT  │       │
      * │       │       │       │       │       │       │       │       │       │       │       │
      * └───────┴───────┴───────┴───────┴───────┘       └───────┴───────┴───────┴───────┴───────┘
      *
@@ -239,11 +239,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     [_MOUSE] = LAYOUT(
         _______, _______, _______, _______, _______,
-        KC_MS_ACCEL0, KC_MS_WH_LEFT, KC_MS_UP, KC_MS_WH_RIGHT, KC_MS_WH_UP,
+        _______, KC_MS_WH_LEFT, KC_MS_UP, KC_MS_WH_RIGHT, KC_MS_WH_UP,
         KC_LEFT_GUI, KC_LEFT_ALT, KC_LEFT_CTRL, KC_LEFT_SHIFT, _______,
-        KC_MS_ACCEL1, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, KC_MS_WH_DOWN,
+        _______, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, KC_MS_WH_DOWN,
         _______, KC_RIGHT_ALT, _______, _______, _______,
-        KC_MS_ACCEL2, KC_PASTE, KC_COPY, KC_CUT, _______,
+        _______, KC_PASTE, KC_COPY, KC_CUT, _______,
         _______, _______, _______,
         KC_MS_BTN2, KC_MS_BTN1, KC_MS_BTN3
     ),
