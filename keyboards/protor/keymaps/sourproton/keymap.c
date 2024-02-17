@@ -6,6 +6,7 @@
 // qmk flash -bl dfu-util-split-right
 
 #include QMK_KEYBOARD_H
+#include "features/achordion.h"
 
 #define _BASE    0
 #define _NUM     1
@@ -15,6 +16,11 @@
 #define _MEDIA   5
 #define _MOUSE   6
 #define _BUT     7
+
+bool process_record_user(uint16_t keycode, keyrecord_t* record) {
+  if (!process_achordion(keycode, record)) { return false; }
+  return true;
+}
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /*
