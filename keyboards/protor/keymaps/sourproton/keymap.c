@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *                 ┌───────┐                                       ┌───────┐
      *                 │   `   │                                       │       │
      *                 │       ├───────┐                       ┌───────┤       │
-     *                 └───────┤   .   │                       │///////├───────┘
+     *                 └───────┤  SPC  │                       │///////├───────┘
      *                         │       ├───────┐       ┌───────┤///////│
      *                         └───────┤   \   │       │       ├───────┘
      *                                 │       │       │       │
@@ -79,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, KC_LEFT_SHIFT, KC_LEFT_CTRL, KC_LEFT_ALT, KC_LEFT_GUI,
         KC_MINUS, KC_EQUAL, KC_SEMICOLON, KC_LEFT_BRACKET, KC_RIGHT_BRACKET,
         _______, _______, _______, KC_RIGHT_ALT, _______,
-        KC_GRAVE, KC_DOT, KC_BACKSLASH,
+        KC_GRAVE, KC_SPACE, KC_BACKSLASH,
         _______, _______, _______
     ),
 
