@@ -15,7 +15,6 @@
 #define _NAV     4
 #define _MEDIA   5
 #define _MOUSE   6
-#define _BUT     7
 
 bool process_record_user(uint16_t keycode, keyrecord_t* record) {
   if (!process_achordion(keycode, record)) { return false; }
@@ -33,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * │ SUPER │  ALT  │ CTRL  │ SHIFT │       │       │       │ SHIFT │ CTRL  │  ALT  │ SUPER │
      * ├───────┼───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┼───────┼───────┤
      * │   Z   │   X   │   C   │   D   │   V   │       │   K   │   H   │  ,|<  │  .|>  │  /|?  │
-     * │ [BUT] │ ALTGR │       │       │       │       │       │       │       │ ALTGR │ [BUT] │
+     * │       │ ALTGR │       │       │       │       │       │       │       │ ALTGR │       │
      * └───────┴───────┴───────┴───────┴───────┘       └───────┴───────┴───────┴───────┴───────┘
      *
      *                 ┌───────┐                                       ┌───────┐
@@ -50,8 +49,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_J, KC_L, KC_U, KC_Y, KC_QUOTE,
         LGUI_T(KC_A), LALT_T(KC_R), LCTL_T(KC_S), LSFT_T(KC_T), KC_G,
         KC_M, RSFT_T(KC_N), RCTL_T(KC_E), LALT_T(KC_I), RGUI_T(KC_O),
-        LT(_BUT, KC_Z), RALT_T(KC_X), KC_C, KC_D, KC_V,
-        KC_K, KC_H, KC_COMMA, RALT_T(KC_DOT), LT(_BUT, KC_SLASH),
+        KC_Z, RALT_T(KC_X), KC_C, KC_D, KC_V,
+        KC_K, KC_H, KC_COMMA, RALT_T(KC_DOT), KC_SLASH,
         LT(_MEDIA, KC_ESCAPE), LT(_NAV, KC_SPACE), LT(_MOUSE, KC_TAB),
         LT(_SYM, KC_ENTER), LT(_NUM, KC_BACKSPACE), LT(_FUN, KC_DELETE)
     ),
@@ -252,39 +251,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, KC_PASTE, KC_COPY, KC_CUT, _______,
         _______, _______, _______,
         KC_MS_BTN2, KC_MS_BTN1, KC_MS_BTN3
-    ),
-
-    /*
-     * BUTTON LAYER
-     * ┌───────┬───────┬───────┬───────┬───────┐       ┌───────┬───────┬───────┬───────┬───────┐
-     * │       │       │       │       │       │       │       │       │       │       │       │
-     * │       │       │       │       │       │       │       │       │       │       │       │
-     * ├───────┼───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┼───────┼───────┤
-     * │ SUPER │  ALT  │ CTRL  │ SHIFT │       │       │       │ SHIFT │ CTRL  │  ALT  │ SUPER │
-     * │       │       │       │       │       │       │       │       │       │       │       │
-     * ├───────┼───────┼───────┼───────┼───────┤       ├───────┼───────┼───────┼───────┼───────┤
-     * │///////│  CUT  │ COPY  │ PASTE │       │       │       │ PASTE │ COPY  │  CUT  │///////│
-     * │///////│       │       │       │       │       │       │       │       │       │///////│
-     * └───────┴───────┴───────┴───────┴───────┘       └───────┴───────┴───────┴───────┴───────┘
-     *
-     *                 ┌───────┐                                       ┌───────┐
-     *                 │       │                                       │       │
-     *                 │       ├───────┐                       ┌───────┤       │
-     *                 └───────┤       │                       │       ├───────┘
-     *                         │       ├───────┐       ┌───────┤       │
-     *                         └───────┤       │       │       ├───────┘
-     *                                 │       │       │       │
-     *                                 └───────┘       └───────┘
-     */
-    [_BUT] = LAYOUT(
-        _______, _______, _______, _______, _______,
-        _______, _______, _______, _______, _______,
-        KC_LEFT_GUI, KC_LEFT_ALT, KC_LEFT_CTRL, KC_LEFT_SHIFT, _______,
-        _______, KC_LEFT_SHIFT, KC_LEFT_CTRL, KC_LEFT_ALT, KC_LEFT_GUI,
-        _______, KC_CUT, KC_COPY, KC_PASTE, _______,
-        _______, KC_PASTE, KC_COPY, KC_CUT, _______,
-        _______, _______, _______,
-        _______, _______, _______
     ),
 
     /*
